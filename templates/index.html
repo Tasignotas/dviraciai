@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Dviračių nuoma Vilniuje</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bikes.css') }}"/>
+    <link rel="stylesheet" id="Google-Font-Titillium+Web-css" href="http://fonts.googleapis.com/css?family=Titillium+Web%3An%2Ci%2Cb%2Cbi&amp;subset=latin%2Clatin-ext&amp;ver=4.1.5" type="text/css" media="all">
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='LetterIcon.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id='map'></div>
+<div id="banner">
+    <img id="banner-img" src="{{ url_for('static', filename='logo_vilnius.png') }}">
+    <div id="banner-content">
+        Dviračių nuomos punktų žemėlapis
+    </div>
+</div>
+<script src="{{ url_for('static', filename='bikes.js') }}"></script>
+</body>
+</html>

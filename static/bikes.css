@@ -1,0 +1,48 @@
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    font-family : 'Titillium Web'
+}
+
+div#banner { 
+    position: fixed;
+    bottom:0%;
+    width: 100%;
+    height: 10%;
+    background-color: #C2272D;
+}
+
+div#banner-content {
+    display: inline-block; 
+    float: left;
+    font-size: 3vmin;
+    height: 100%;
+    padding: 1%;
+    color: #FFFFFF;
+}
+
+img#banner-img {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    padding: 1%;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+#map {
+    position:absolute;
+    height:90%;
+    width:100%;
+}
