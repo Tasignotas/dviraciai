@@ -9,7 +9,7 @@ var map = L.map('map', {
     maxBounds: bounds
 }).setView([54.69221264, 25.27933285], 12);
 
-L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
@@ -18,9 +18,9 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png
 $.getJSON("apidata", function(data){
     for(var i=0; i<data.length; i++){
         var latlng = [data[i].position.lat, data[i].position.lng]
-        var popupContent = '<b>' + data[i].address + '</b><br/>' + 
+        var popupContent = '<b>' + data[i].address + '</b><br/>' +
                            'Laisvų dviračių: ' + data[i].available_bikes + '<br/>' +
-                           'Laisvų vietų: ' + data[i].available_bike_stands; 
+                           'Laisvų vietų: ' + data[i].available_bike_stands;
         var marker = L.marker(latlng, {
                 icon: L.letterIcon(data[i].available_bikes, {
                     radius: (data[i].available_bikes < 5) ? 10 : 15,
